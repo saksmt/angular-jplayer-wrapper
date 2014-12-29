@@ -1,0 +1,25 @@
+{
+  "name": "angular-jplayer-wrapper",
+  "version": "0.0.1",
+  "authors": [
+    "smt <kirillsaksin@yandex.ru>"
+  ],
+  "description": "Simple wrapper of jPlayer for angular.js",
+  "main": "jplayer.angular.js",
+  "keywords": [
+    "angular",
+    "jplayer",
+    "angularjs",
+    "jquery"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/saksmt/angular-jplayer-wrapper",
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "dependencies": {
+      "jplayer": "2.*",
+      "angular": "1.3.*"
+  }
+}
