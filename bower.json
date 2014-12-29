@@ -16,7 +16,8 @@
   "homepage": "https://github.com/saksmt/angular-jplayer-wrapper",
   "ignore": [
     "**/.*",
-    "bower_components"
+    "bower_components",
+    "README.MD"
   ],
   "dependencies": {
       "jplayer": "2.*",

@@ -9,8 +9,8 @@ API
 Services
 --------
 
- * jPlayer - provides wrapper-class for jPlayer instance;
- * jPlayerFactory - creates new players;
+ * `jPlayer` - provides wrapper-class for jPlayer instance;
+ * `jPlayerFactory` - creates new players;
 
 Methods
 -------
@@ -23,9 +23,9 @@ Methods
 
 **jPlayer**
 
-`jPlayer::play([position]): jPlayer` - if position not set resume playing otherwise play from specified position;
+`jPlayer::play([position]): jPlayer` - if `position` not set resume playing otherwise play from specified `position`;
 
-`jPlayer::pause([position]): jPlayer` - if position not set pause playing otherwise move to position and pause;
+`jPlayer::pause([position]): jPlayer` - if `position` not set pause playing otherwise move to `position` and pause;
 
 `jPlayer::setMedia(media): jPlayer` - set media for player, where `media` valid jPlayer media-object;
 
