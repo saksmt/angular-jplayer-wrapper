@@ -1,4 +1,4 @@
-(function (angular, $) {
+(function (angular, $, document) {
     'use strict';
     angular.module('jPlayerModule', [])
         .factory('jPlayer', function () {
@@ -164,7 +164,7 @@
         .service('jPlayerFactory', ['$document', 'jPlayer', function ($document, Player) {
             var createNewInstance = function (selector, options) {
                 var
-                    element  = $document.createElement('div'),
+                    element  = document.createElement('div'),
                     $element = $(element),
                     instance = $element.jPlayer(options);
                 $(selector).append(instance);
@@ -211,4 +211,4 @@
                     });
             };
         }]);
-}(window.angular, window.jQuery));
+}(window.angular, window.jQuery, window.document));
