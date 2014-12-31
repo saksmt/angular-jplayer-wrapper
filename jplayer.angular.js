@@ -38,7 +38,7 @@
                     },
                     ready = false,
                     checkEvent = function (eventName, event) {
-                        if (events.indexOf(eventName) < 0) {
+                        if (Object.keys(events).indexOf(eventName) < 0) {
                             throw 'No such event!';
                         }
                         if (typeof event !== 'function') {
