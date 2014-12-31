@@ -169,6 +169,7 @@
                     container = $(selector),
                     instance  = $element.jPlayer(options);
                 container.append(instance);
+                console.log($(container.children()[0]));
                 return new Player($(container.children()[0]));
             };
             this.createPlayer = function (selector, media) {
