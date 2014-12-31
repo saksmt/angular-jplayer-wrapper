@@ -187,16 +187,17 @@
                 return thePlayer;
             };
             this.createLiveStreamPlayer = function (selector, mediaStream) {
-                var thePlayer = createNewInstance(selector, {});
-                return thePlayer
-                    .setOption('supplied', getSuppliedFormats(mediaStream))
-                    .setOption('preload', 'none')
-                    .setOption('wmode', 'window')
-                    .setOption('autoBlur', false)
-                    .setOption('keyEnabled', true)
-                    .on('ready', function () {
+                var thePlayer = createNewInstance(selector, {
+                    supplied: getSuppliedFormats(mediaStream),
+                    preload: 'none',
+                    wmode: 'window',
+                    autoBlur: false,
+                    keyEnabled: true,
+                    ready: function () {
                         thePlayer.setMedia(mediaStream);
-                    })
+                    }
+                });
+                return thePlayer
                     .on('pause', function () {
                         thePlayer.clearMedia();
                     })
