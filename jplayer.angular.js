@@ -193,9 +193,6 @@
                     .on('pause', function () {
                         thePlayer.clearMedia();
                     })
-                    .on('stop', function () {
-                        thePlayer.clearMedia();
-                    })
                     .on('error', function () {
                         if (thePlayer.isReady()) {
                             thePlayer
