@@ -39,7 +39,7 @@
                     ready = false,
                     checkEvent = function (eventName, event) {
                         if (Object.keys(events).indexOf(eventName) < 0) {
-                            throw 'No such event!';
+                            throw 'No such event("' + eventName +'")!';
                         }
                         if (typeof event !== 'function') {
                             throw ('Can`t bind "' + (typeof event) + '" as event handler!');
