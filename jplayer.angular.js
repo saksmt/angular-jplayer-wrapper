@@ -164,11 +164,12 @@
         .service('jPlayerFactory', ['$document', 'jPlayer', function ($document, Player) {
             var createNewInstance = function (selector, options) {
                 var
-                    element  = document.createElement('div'),
-                    $element = $(element),
-                    instance = $element.jPlayer(options);
-                $(selector).append(instance);
-                return new Player(instance);
+                    element   = document.createElement('div'),
+                    $element  = $(element),
+                    container = $(selector),
+                    instance  = $element.jPlayer(options);
+                container.append(instance);
+                return new Player($(container.children()[0]));
             };
             this.createPlayer = function (selector, media) {
                 var thePlayer = createNewInstance(selector, {});
