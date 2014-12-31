@@ -173,7 +173,7 @@
                 return new Player($(container.children()[0]));
             }, getSuppliedFormats = function (media) {
                 console.log(media);
-                var supplied = Object.keys(mediaStream).filter(function (element) {
+                var supplied = Object.keys(media).filter(function (element) {
                     return element !== 'title';
                 }).join(', ');
                 console.log(supplied);
