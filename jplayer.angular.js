@@ -171,6 +171,13 @@
                 container.append(instance);
                 console.log($(container.children()[0]));
                 return new Player($(container.children()[0]));
+            }, getSuppliedFormats = function (media) {
+                console.log(media);
+                var supplied = Object.keys(mediaStream).filter(function (element) {
+                    return element !== 'title';
+                }).join(', ');
+                console.log(supplied);
+                return supplied;
             };
             this.createPlayer = function (selector, media) {
                 var thePlayer = createNewInstance(selector, {});
@@ -182,9 +189,7 @@
             this.createLiveStreamPlayer = function (selector, mediaStream) {
                 var thePlayer = createNewInstance(selector, {});
                 return thePlayer
-                    .setOption('supplied', Object.keys(mediaStream).filter(function (element) {
-                        return element !== 'title';
-                    }).join(', '))
+                    .setOption('supplied', getSuppliedFormats(mediaStream))
                     .setOption('preload', 'none')
                     .setOption('wmode', 'window')
                     .setOption('autoBlur', false)
